@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('Screenshot\ 2024-05-17\ 103456.png'); /* Change to your background image */
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart-shape {
+    position: relative;
+    width: 300px; /* Increase width */
+    height: 300px; /* Increase height */
+    background-color: pink; /* Change heart color here */
+    transform: rotate(-45deg);
+    margin: 20px;
+}
+
+.heart-shape::before,
+.heart-shape::after {
+    content: "";
+    position: absolute;
+    width: 300px; /* Increase width */
+    height: 300px; /* Increase height */
+    background-color: pink; /* Change heart color here */
+    border-radius: 150px; /* Half of width/height for circles */
+}
+
+.heart-shape::before {
+    top: -150px; /* Move circle up */
+    left: 0;
+}
+
+.heart-shape::after {
+    left: 150px; /* Move circle right */
+    top: 0; /* Align with bottom circle */
+}
+
+.heart-input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the input box */
+    width: 350px; /* Input width */
+    height: 50px; /* Input height */
+    padding: 10px;
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    text-align: center;
+    font-size: 18px; /* Increase font size */
+    outline: none;
+    background-color: white; /* Input background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for input */
+}
